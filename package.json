@@ -1,5 +1,5 @@
 {
-  "name": "Basic crud in Nodejs",
+  "name": "basic-crud-in-nodejs",
   "version": "1.0.0",
   "description": "Basic nodejs crud",
   "main": "index.js",
