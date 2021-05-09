@@ -7,7 +7,7 @@ dbSetup();
 app.use(express.json());
 
 
-app.use("/user", allUserRoute);
+app.use(allUserRoute);
 
 app.use((req, res) => {
     res.status(200).json({
