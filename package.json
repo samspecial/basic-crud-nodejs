@@ -1,14 +1,14 @@
 {
-  "name": "task-three",
+  "name": "Basic crud in Nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic nodejs crud",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon \"./src/index.js\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "express", "mongodb", "readme", "heroku"],
+  "author": "samuel osinloye",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^9.0.0",
