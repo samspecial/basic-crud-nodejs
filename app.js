@@ -1,16 +1,13 @@
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-require("dotenv").config();
+const dbSetup = require("./database/setup");
+const allUserRoute = require("./route/userRoute");
 
+dbSetup();
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI, { useFindAndModify: true, useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }).then(() => console.log("Successfully connected to MongoDB Atlas")).catch(error => {
-    console.log("Unable to connect to MongoDB Atlas");
-    console.log(error);
-});
 
-app.use("/users", require("./route/userRoute"));
+app.use("/user", allUserRoute);
 
 app.use((req, res) => {
     res.status(200).json({
