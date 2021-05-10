@@ -6,13 +6,12 @@ const allUserRoute = require("./route/userRoute");
 dbSetup();
 app.use(express.json());
 
-
 app.use(allUserRoute);
 
 app.use((req, res) => {
-    res.status(200).json({
-        message: "Welcome. Glad to have you here!!!"
-    })
+  res.status(200).json({
+    message: "Welcome. Glad to have you here!!!",
+  });
 });
 
 module.exports = app;
